@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: spotify
+    schema: spotify              # or use {{ target.schema }} for environment-safe naming
+    loader: bigquery                 # identifies how data is loaded (fivetran, airbyte, etc.)
+    tables:
+      - name: charts
+        identifier: raw_charts
+      - name: music_type
+        identifier: raw_spotify_data
