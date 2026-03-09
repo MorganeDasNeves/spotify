@@ -11,9 +11,9 @@ renamed as (
     select
         title,
         rank,
-        date,
+        date as date_date,
         artist,
-        url,
+        url as url_link,
         region,
         chart,
         trend,

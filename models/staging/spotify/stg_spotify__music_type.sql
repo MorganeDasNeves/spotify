@@ -13,7 +13,7 @@ renamed as (
         album,
         popularity,
         duration_ms,
-        explicit,
+        explicit as is_explicit,
         release_date,
         available_markets,
         af_danceability,
