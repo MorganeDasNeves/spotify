@@ -42,3 +42,7 @@ models:
    - name: af_instrumentalness #FLOAT
    - name: af_valence #FLOAT
    - name: af_tempo #FLOAT
+ - name: int_spotify__charts
+   description: table intermédiaire qui contient le track id créé à partir de la colonne url
+   columns: 
+   - name: track_id #STR
