@@ -1,4 +1,4 @@
-SELECT 
+SELECT DISTINCT
 track_id
 ,album
 ,popularity
