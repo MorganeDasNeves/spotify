@@ -46,3 +46,5 @@ models:
    description: table intermédiaire qui contient le track id créé à partir de la colonne url
    columns: 
    - name: track_id #STR
+ - name: int_spotify__music_type
+   description: table intermédiaire clean -> changement au format date et suppression NULL sur album et duration ms a 0
