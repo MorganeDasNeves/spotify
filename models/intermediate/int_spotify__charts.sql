@@ -7,7 +7,7 @@ SELECT DISTINCT
         ,date_date
         ,artist
         ,url_link
-        ,region
+        ,country
         ,chart
         ,trend
         ,streams

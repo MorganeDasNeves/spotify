@@ -14,7 +14,7 @@ renamed as (
         date as date_date,
         artist,
         url as url_link,
-        region,
+        region as country,
         chart,
         trend,
         streams
