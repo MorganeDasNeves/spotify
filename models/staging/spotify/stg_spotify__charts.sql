@@ -10,7 +10,7 @@ renamed as (
 
     select
         title,
-        rank,
+        rank AS ranking,
         date as date_date,
         artist,
         url as url_link,
