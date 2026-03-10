@@ -20,7 +20,7 @@ models:
    - name: date #DATE   
    - name: artist #STR
    - name: url #STR colonne à utiliser pour extraire le track ID
-   - name: region #STR 70 pays
+   - name: country #STR 70 pays
    - name: chart #STR viral50 ou top200
    - name: trend #STR
    - name: streams #INT
@@ -48,3 +48,7 @@ models:
    - name: track_id #STR
  - name: int_spotify__music_type
    description: table intermédiaire clean -> changement au format date et suppression NULL sur album et duration ms a 0
+ - name: int_spotify__main_join
+   description: table intermédiaire qui fait la jointure entre les tables int_spotify__charts et int_spotify__music_type
+   columns: 
+   - name: region #STR région du monde pour regrouper les pays
