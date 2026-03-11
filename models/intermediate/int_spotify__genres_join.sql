@@ -2,5 +2,5 @@ SELECT
 m.*
 ,g.genres
 FROM {{ ref('int_spotify__main_join') }} AS m
-JOIN {{ ref('stg_spotify__genres') }} AS g 
+JOIN {{ ref('int_spotify__genres_agg') }} AS g 
 USING (track_id)
