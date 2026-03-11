@@ -69,6 +69,7 @@ models:
    columns: 
    - name: track_id #STR 
    - name: genres #liste des genres
+   - name: cat_genre #catégorisation des genres via le case when
 
    
   
