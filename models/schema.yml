@@ -64,4 +64,11 @@ models:
    - name: duration_segment #STR radio friendly ou long play
    - name: Potentiel_Viral #STR Viral hits, popular tracks ou Niche tracks
    - name: Energy_Vibe #STR Happy & Energetic, Balanced ou Melancholy & Chill
+ - name: int_spotify__genres_agg
+   description: table intermédiaire qui contient le genre pour faire la jointure avec la main
+   columns: 
+   - name: track_id #STR 
+   - name: genres #liste des genres
+
+   
   
