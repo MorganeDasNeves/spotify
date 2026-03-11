@@ -1,4 +1,4 @@
--- aliementation des genres nuls a partir de l'artiste de la même table
+-- alimentation des genres null à partir de l'artiste de la même table
 WITH liste_artiste_genre AS (-- on crée une table simple avec les artiste + genre principal (il peut y en avoir plusieurs on prends le max)
     SELECT DISTINCT
     artist

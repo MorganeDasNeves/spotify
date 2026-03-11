@@ -6,7 +6,7 @@ with temp as (
     ,(af_energy * 0.6) + (af_valence *0.4) as Energy_Vibe_calcul
 from {{ ref('int_spotify__main_join') }}
 )
-select 
+select DISTINCT
  track_id
 ,case 
 when Potentiel_Viral_calcul >= 0.75 then 'Viral hits' -- tres populaire tres dansant fort potentiel de diffusion

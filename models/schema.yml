@@ -65,11 +65,19 @@ models:
    - name: Potentiel_Viral #STR Viral hits, popular tracks ou Niche tracks
    - name: Energy_Vibe #STR Happy & Energetic, Balanced ou Melancholy & Chill
  - name: int_spotify__genres_agg
-   description: table intermédiaire qui contient le genre pour faire la jointure avec la main
+   description: table intermédiaire qui contient le genre pour faire la jointure avec la table main
    columns: 
    - name: track_id #STR 
    - name: genres #liste des genres
    - name: cat_genre #catégorisation des genres via le case when
-
-   
-  
+ - name: int_spotify__genres_full
+   description: table qui contient le maximum de genres après dernière modification
+   columns: 
+   - name: cat_genre #catégorisation des genres restant à NULL à partir de l'artiste
+ - name: mart_spotify__data_by_day
+   description: reprend l'ensemble des données de int_spotify__genres_full à la granularité la plus fine (au jour) + KPI de la vue int_spotify__main_kpi
+   columns: 
+   - name: cat_genre #catégorisation des genres restant à NULL à partir de l'artiste
+   - name: duration_segment #STR radio friendly ou long play
+   - name: Potentiel_Viral #STR Viral hits, popular tracks ou Niche tracks
+   - name: Energy_Vibe #STR Happy & Energetic, Balanced ou Melancholy & Chill
