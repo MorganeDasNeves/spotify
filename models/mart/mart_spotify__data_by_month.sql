@@ -11,18 +11,16 @@ Select
     ,count(distinct title) as nb_title
     ,count(distinct album) as nb_album
     ,sum(streams) as total_streams
-    ,sum(popularity) as popularity
+    ,avg(popularity) as avg_popularity
     ,sum(case 
     when is_explicit=True then 1 else 0 end) as nb_is_explicit
-    ,sum(af_danceability) as sum_danceability
     ,avg(af_danceability) as avg_danceability
-    ,sum(af_energy) as sum_energy
     ,avg(af_energy) as avg_energy
-    ,sum(af_speechiness) as sum_speechiness
-    ,sum(af_acousticness) as sum_acoustiness
-    ,sum(af_instrumentalness) as sum_intrumentalness
-    ,sum(af_valence) as sum_valence
-    ,sum(af_tempo) as sum_tempo
+    ,avg(af_speechiness) as avg_speechiness
+    ,avg(af_acousticness) as avg_acoustiness
+    ,avg(af_instrumentalness) as avg_intrumentalness
+    ,avg(af_valence) as avg_valence
+    ,avg(af_tempo) as avg_tempo
 FROM {{ ref('mart_spotify__data_by_day') }}
 group by year_month
     ,country
