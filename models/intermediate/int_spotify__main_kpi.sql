@@ -14,7 +14,7 @@ when potentiel_viral_calcul < 0.4 then 'Niche tracks' -- faible pouplarite et po
 else 'Popular tracks' -- performance correcte playlist generaliste
 end as potentiel_viral
 ,case
-when energy_vibe_calcul >= 0.6 then 'Happy & energetic' -- passé de 0.75 à 0.6
+when energy_vibe_calcul >= 0.70 then 'Happy & energetic' -- passé de 0.75 à 0.7
 when energy_vibe_calcul < 0.4 then 'Melancholy & chill'
 else 'Balanced' 
 end as energy_vibe
