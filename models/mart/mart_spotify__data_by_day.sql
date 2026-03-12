@@ -33,3 +33,4 @@ SELECT
 FROM {{ref('int_spotify__genres_full')}} AS a
 INNER JOIN {{ref('int_spotify__main_kpi')}} AS b
 ON a.track_id = b.track_id
+WHERE date_date >= '2020-01-01'
