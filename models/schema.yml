@@ -81,3 +81,22 @@ models:
    - name: duration_segment #STR radio friendly ou long play
    - name: Potentiel_Viral #STR Viral hits, popular tracks ou Niche tracks
    - name: Energy_Vibe #STR Happy & Energetic, Balanced ou Melancholy & Chill
+ - name: mart_spotify__data_by_month
+   description: agrégation par region, country, cat_genre, potentiel_viral, energy_vibe, duration_segment
+   columns: 
+   - name: year_month #FORMAT_DATE('%Y-%m', date_date)
+   - name: nb_artist #COUNT
+   - name: nb_title #COUNT
+   - name: nb_album #COUNT
+   - name: avg_popularity
+   - name: nb_is_explicit #when is_explicit=True then 1 else 0 end)
+   - name: avg_danceability #idem autres indicateurs af
+ - name: mart_spotify__top200
+   description: agrégation par region, country, cat_genre, potentiel_viral, energy_vibe, duration_segment
+   columns: 
+   - name: top20 #WHEN ranking <= 20 THEN 1 ELSE 0
+   - name: CPS #Chart Performance Score -> 201 - ranking
+ - name: mart_spotify__viral50
+   description: agrégation par region, country, cat_genre, potentiel_viral, energy_vibe, duration_segment
+   columns: 
+   - name: viral10 #WHEN ranking <= 10 THEN 1 ELSE 0
