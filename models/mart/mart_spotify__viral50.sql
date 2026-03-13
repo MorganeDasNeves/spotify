@@ -1,8 +1,16 @@
 {{ config(materialized='table') }}
+WITH is_top_200 AS (
+SELECT DISTINCT artist
+FROM {{ ref('mart_spotify__data_by_day') }}
+WHERE chart= 'top200'
+
+
+)
+
 SELECT
     date_date
     ,track_id
-    ,artist
+    ,a.artist
     ,title
     ,album
     ,release_date
@@ -29,7 +37,13 @@ SELECT
     ,potentiel_viral
     ,energy_vibe
     ,duration_segment
-    FROM {{ ref('mart_spotify__data_by_day') }}
+    ,CASE 
+    WHEN b.artist is NOT NULL THEN True
+    ELSE False
+    END AS is_also_top200 
+    FROM {{ ref('mart_spotify__data_by_day') }} as a
+    LEFT JOIN is_top_200 as b
+    USING (artist)
     WHERE chart= 'viral50' --AND region = 'Europe'
     AND date_date >= '2020-01-01'
     ORDER BY date_date, ranking
