@@ -40,10 +40,14 @@ SELECT
     ,CASE 
     WHEN b.artist is NOT NULL THEN True
     ELSE False
-    END AS is_also_top200 
+    END AS is_also_top200
+    ,CASE
+    WHEN b.artist IS NULL THEN 1
+    ELSE 0
+    END AS nb_ephemeral_artists
     FROM {{ ref('mart_spotify__data_by_day') }} as a
     LEFT JOIN is_top_200 as b
     USING (artist)
-    WHERE chart= 'viral50' --AND region = 'Europe'
-    AND date_date >= '2020-01-01'
+    WHERE chart= 'viral50' AND region = 'Europe'
+    AND date_date >= '2021-01-01' AND date_date <= '2021-11-30'
     ORDER BY date_date, ranking
