@@ -81,6 +81,6 @@ SELECT
     WHEN artist = "Lil Nas X" THEN "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/thisisv3/7jVv8c5Fj3E9VhNjxT4snq/en"
     END AS artist_url
     FROM {{ ref('mart_spotify__data_by_day') }}
-    WHERE chart= 'top200' --AND region = 'Europe'
-    AND date_date >= '2020-01-01'
+    WHERE chart= 'top200' AND region = 'Europe'
+    AND date_date >= '2021-01-01' AND date_date <= '2021-11-30'
     ORDER BY date_date, ranking
