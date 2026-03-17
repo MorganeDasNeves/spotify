@@ -21,7 +21,7 @@ SELECT DISTINCT
         
         -- 4. Genres larges (priorité basse, récupère ce qui reste)
         WHEN genres LIKE '%punk%' OR genres LIKE '%rock%' THEN 'Rock'--11
-        WHEN genres LIKE '%folk%' OR genres LIKE '%acoustic%' THEN 'Folk/Acoustic'--12
+        WHEN genres LIKE '%folk%' OR genres LIKE '%acoustic%' THEN 'Folk'--12
         WHEN genres LIKE '%pop%' OR genres LIKE '%dance pop%' OR genres LIKE '%opm%' THEN 'Pop'--13
         
         -- 5. Par défaut
