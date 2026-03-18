@@ -42,6 +42,7 @@ SELECT
     WHEN title = "Tout en Gucci" THEN "https://cdn-images.dzcdn.net/images/cover/f6bcf76c6a01ffa7ab295f9b5cecf0c2/500x500.jpg"
     WHEN title = "La kiffance" THEN "https://cdn-images.dzcdn.net/images/cover/0846f00620ad172c934e89bcad774388/0x1900-000000-80-0-0.jpg"
     WHEN title = "Eté 90" THEN "https://cdn-images.dzcdn.net/images/cover/4864326bb55c52bb97ba34fa03a2b084/1900x1900-000000-80-0-0.jpg"
+    WHEN title = "MONTERO (Call Me By Your Name)" THEN "https://cdn-images.dzcdn.net/images/cover/18e6daf0a1c70c1346c44670ff70645d/1900x1900-000000-80-0-0.jpg"
     END AS cover_url
     ,CASE
     WHEN artist = "Ninho" THEN "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/thisisv3/6Te49r3A6f5BiIgBRxH7FH/ar"
